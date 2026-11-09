@@ -14,7 +14,9 @@ def mongo():
     if not svc.ping():
         pytest.skip("MongoDB indisponível")
     yield svc
-    svc.client.drop_database(nome_teste)
+    db_teste = svc.client[nome_teste]
+    for nome_colecao in db_teste.list_collection_names():
+        db_teste.drop_collection(nome_colecao)
 
 
 @pytest.fixture(scope="session")
