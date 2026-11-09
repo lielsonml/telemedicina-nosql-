@@ -1,0 +1,23 @@
+# Copie este arquivo para .env e preencha. NUNCA suba o .env para o GitHub.
+
+# MongoDB Atlas: mongodb+srv://USUARIO:SENHA@cluster0.xxxxx.mongodb.net/
+# MongoDB local:  mongodb://localhost:27017
+MONGO_URI=
+MONGO_DB=telemedicina
+
+# Redis Cloud: redis://default:SENHA@HOST:PORTA
+# Redis local:  redis://localhost:6379/0
+REDIS_URL=
+
+# Neo4j AuraDB: neo4j+s://XXXXXXXX.databases.neo4j.io
+# Neo4j local:  bolt://localhost:7687
+NEO4J_URI=
+NEO4J_USERNAME=neo4j
+NEO4J_PASSWORD=
+NEO4J_DATABASE=neo4j
+
+# TTLs em segundos (para a demo, PRESENCA_TTL=30 deixa a expiração visível)
+SESSAO_TTL=1800
+PRESENCA_TTL=120
+CACHE_TTL_FEED=30
+CACHE_TTL_PERFIL=120
